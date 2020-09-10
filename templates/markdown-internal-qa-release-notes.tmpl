@@ -1,0 +1,14 @@
+## Release Notes:
+{{ range $type, $componentMap := .Categories }}
+#### {{ $type.FriendlyName }}
+{{- range $component, $commitList := $componentMap }}
+{{ $length := len $commitList }} {{ if eq $length 1 }}
+* [ ] **{{ $component }}** {{ (index $commitList 0).Conventional.Message }} ({{ (index $commitList 0).ShortHash }})
+{{ else }}
+* **{{ $component }}**
+{{- range $commit := $commitList }}
+  * [ ] {{ $commit.Conventional.Message }} ({{ $commit.ShortHash }})
+{{- end }}
+{{- end }}
+{{- end }}
+{{- end }}
