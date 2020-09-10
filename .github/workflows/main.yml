@@ -7,7 +7,7 @@ jobs:
     steps:
       - name: Superclog Release Notes Step
         id: releasnotes
-        uses: .
+        uses: lwaddicor/superclog@feat/docker-action-workflow
         with:
           from: 'test'
           to: 'test'
