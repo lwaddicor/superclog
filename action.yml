@@ -1,0 +1,29 @@
+# action.yml
+name: 'Superclog'
+description: 'Superclog generate release notes'
+inputs:
+  path:
+    description: 'Path to git repository'
+    required: false
+    default: ''
+  from:
+    description: 'Git commit hash from'
+    required: true
+  to:
+    description: 'Github commit hash to'
+    required: true
+  tmpl:
+    description: 'Output template'
+    required: false
+    default: "InternalQARelease"
+outputs:
+  time: # id of output
+    description: 'The time we greeted you'
+runs:
+  using: 'docker'
+  image: 'Dockerfile'
+  args:
+    - path=\"${{ inputs.path }}\"
+    - from=\"${{ inputs.from }}\"
+    - to=\"${{ inputs.to }}\"
+    - tmpl=\"${{ inputs.tmpl }}\"
