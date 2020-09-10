@@ -1,0 +1,15 @@
+on: [push]
+
+jobs:
+  release_notes_generate:
+    runs-on: ubuntu-latest
+    name: A job to say hello
+    steps:
+      - name: Superclog Release Notes Step
+        id: releasnotes
+        uses: actions/superclog@v1
+        with:
+          from: 'test''
+          to: 'test'
+      - name: Get the output time
+        run: 'echo "${{ steps.releasenotes.outputs.notes }}"'
