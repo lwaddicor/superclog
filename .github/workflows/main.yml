@@ -9,7 +9,7 @@ jobs:
         id: releasnotes
         uses: actions/superclog@v1
         with:
-          from: 'test''
+          from: 'test'
           to: 'test'
       - name: Get the output time
         run: 'echo "${{ steps.releasenotes.outputs.notes }}"'
