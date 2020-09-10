@@ -7,7 +7,7 @@ jobs:
     steps:
       - name: Superclog Release Notes Step
         id: releasnotes
-        uses: lwaddicor/superclog@v1
+        uses: .
         with:
           from: 'test'
           to: 'test'
