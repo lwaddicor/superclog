@@ -4,7 +4,6 @@ RUN mkdir /build
 ADD / /build/
 WORKDIR /build
 RUN CGO_ENABLED=0 GOOS=linux go build -a -o superclog github.com/lwaddicor/superclog/cmd/superclog
-go build github.com/lwaddicor/superclog/cmd/superclog
 # generate clean, final image for end users
 FROM alpine:3.12.0
 
