@@ -22,7 +22,8 @@ outputs:
 runs:
   using: 'docker'
   image: 'Dockerfile'
-#  args:
+  args:
+    - -l
 #    - path=\"${{ inputs.path }}\"
 #    - from=\"${{ inputs.from }}\"
 #    - to=\"${{ inputs.to }}\"
