@@ -22,8 +22,8 @@ outputs:
 runs:
   using: 'docker'
   image: 'Dockerfile'
-  args:
-    - path=\"${{ inputs.path }}\"
-    - from=\"${{ inputs.from }}\"
-    - to=\"${{ inputs.to }}\"
-    - tmpl=\"${{ inputs.tmpl }}\"
+#  args:
+#    - path=\"${{ inputs.path }}\"
+#    - from=\"${{ inputs.from }}\"
+#    - to=\"${{ inputs.to }}\"
+#    - tmpl=\"${{ inputs.tmpl }}\"
