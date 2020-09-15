@@ -3,9 +3,10 @@ package main
 import (
 	"flag"
 	"fmt"
-	"github.com/lwaddicor/superclog"
 	"log"
 	"os"
+
+	"github.com/lwaddicor/superclog"
 )
 
 func main() {

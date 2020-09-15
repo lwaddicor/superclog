@@ -10,6 +10,6 @@ FROM alpine:3.12.0
 COPY --from=builder /build/superclog .
 
 # executable
-ENTRYPOINT [ "./superclog" ]
+ENTRYPOINT [ "ls" ]
 # arguments that can be overridden
 CMD [ "--help" ]
